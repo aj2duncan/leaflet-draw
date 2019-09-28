@@ -1,0 +1,19 @@
+Type: Compendium
+Package: Leaflet Draw Demo
+Title: Shiny App That Exports Shapefile
+Version: 0.0.1
+Authors@R: 
+    person(given = "Andrew",
+           family = "Duncan",
+           role = c("aut", "cre"))
+Description: Demonstration shiny app which lets users construct
+    an arbitrary shapefile and export it.
+Depends: 
+    leaflet,
+    leaflet.extras,
+    sf,
+    shiny,
+    shinyjs,
+    tidyverse
+Encoding: UTF-8
+LazyData: true
