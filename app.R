@@ -30,9 +30,7 @@ server <- function(input, output, session) {
     })
     
     observeEvent(input$map_draw_new_feature, {
-        print("Draw new feature")
         show("downloaddiv")
-        
     })
 
     output$downloadData <- downloadHandler(
