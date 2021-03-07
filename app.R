@@ -25,8 +25,14 @@ server <- function(input, output, session) {
     output$map <- renderLeaflet({
         leaflet() %>%
             addTiles() %>%
-            setView(lng = -5.3, lat = 52.3, zoom = 7) %>%
-            addDrawToolbar(editOptions = editToolbarOptions())
+            setView(lng = -5.3, lat = 56.3, zoom = 6) %>%
+            addDrawToolbar(rectangleOptions = FALSE,
+                           editOptions = editToolbarOptions(edit = FALSE,
+                                                            remove = TRUE),
+                           polylineOptions = FALSE,
+                           circleOptions = FALSE,
+                           circleMarkerOptions = FALSE,
+                           markerOptions = FALSE)
     })
     
     observeEvent(input$map_draw_new_feature, {
