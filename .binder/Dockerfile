@@ -1,6 +1,8 @@
 FROM rocker/binder:4.3.2
 LABEL maintainer='Andrew Duncan'
-COPY --chown=${NB_USER} . ${HOME}
+USER root
+COPY . ${HOME}
+RUN chown -R ${NB_USER} ${HOME}
 
 RUN R -e "install.packages(c('leaflet.extras', 'shinyjs'))"
 
