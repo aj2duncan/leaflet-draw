@@ -2,7 +2,7 @@ FROM rocker/binder:4.3.2
 LABEL maintainer='Andrew Duncan'
 COPY --chown=${NB_USER} . ${HOME}
 
-RUN R -e "install.packages(c('leaflet.extras', 'shinyjs'))"\
+RUN R -e "install.packages(c('leaflet.extras', 'shinyjs'))"
 
 USER ${NB_USER}
 
