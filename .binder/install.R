@@ -1,9 +1,0 @@
-install.packages(
- c( 
-  "leaflet",
-  "leaflet.extras",
-  "sf",
-  "shiny",
-  "shinyjs",
-  "tidyverse")
-)
